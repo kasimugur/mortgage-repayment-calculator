@@ -1,4 +1,6 @@
-import '../scss/css/style.css'
+import { iconCalculator, ilistrationEmpty } from '../page/page'
+import '../scss/style.scss'
+
 export default function Mortgage() {
   return (
     <>
@@ -32,15 +34,15 @@ export default function Mortgage() {
                 <label>Interest Only</label>
               </div>
             </div>
-            <button>  Calculate Repayments</button>
+            <button> {iconCalculator}  Calculate Repayments</button>
           </form>
-          <div className="card">
-
-            <div className="row">
-              <h2>  Results shown here</h2>
-              <p>Complete the form and click “calculate repayments” to see what
-                your monthly repayments would be.</p>
-            </div>
+        </div>
+        <div className="card">
+    {ilistrationEmpty}
+          <div className="row">
+            <h2>  Results shown here</h2>
+            <p>Complete the form and click “calculate repayments” to see what
+              your monthly repayments would be.</p>
           </div>
         </div>
       </div>

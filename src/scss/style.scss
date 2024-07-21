@@ -1,44 +1,80 @@
-$Lime: hsl(61, 70%, 52%);
-$Red: hsl(4, 69%, 50%);
-$White: hsl(0, 0%, 100%);
-$Slat100: hsl(202, 86%, 94%);
-$Slat300: hsl(203, 41%, 72%);
-$Slat500: hsl(200, 26%, 54%);
-$Slat700: hsl(200, 24%, 40%);
-$Slat900: hsl(202, 55%, 16%);
+$lime: hsl(61, 70%, 52%);
+$red: hsl(4, 69%, 50%);
+$white: hsl(0, 0%, 100%);
+$slat100: hsl(202, 86%, 94%);
+$slat300: hsl(203, 41%, 72%);
+$slat500: hsl(200, 26%, 54%);
+$slat700: hsl(200, 24%, 40%);
+$slat900: hsl(202, 55%, 16%);
 
 
-@media screen and (min-width:375) {
+* {
 
-*{
-margin: 40px;
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  .container {
-    .card-item {
 
-      .header {}
 
-      .form {
+#root {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: $slat100;
+  display: flex;
 
-        .inpt {
+}
 
-          .inpt-term {}
+.container {
+  box-shadow: 0.5px 0.5px 3px $slat300 ;
+  width: 800px;
+  height: 400px;
+  padding: 10px;
+  margin: auto;
+  background-color: $white;
+  border-radius: 15px;
+  display: flex;
 
-          .inpt-rate {}
-        }
 
-        .type {
+  .card-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
 
-          .rad {}
-        }
+    .header {}
 
-        button {}
+    .form {
+
+      .inpt {
+
+        .inpt-term {}
+
+        .inpt-rate {}
       }
 
-      .card {
+      .type {
 
-        .row {}
+        .rad {}
       }
+
+      button {}
     }
+
+
+  }
+
+  .card {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: $slat900;
+    position: relative;
+
+    .row {}
   }
 }
