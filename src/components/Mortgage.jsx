@@ -1,3 +1,4 @@
+import '../scss/css/style.css'
 export default function Mortgage() {
   return (
     <>
@@ -40,8 +41,6 @@ export default function Mortgage() {
               <p>Complete the form and click “calculate repayments” to see what
                 your monthly repayments would be.</p>
             </div>
-
-
           </div>
         </div>
       </div>
