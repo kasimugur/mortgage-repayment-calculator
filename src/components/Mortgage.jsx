@@ -65,7 +65,7 @@ export default function Mortgage() {
                 <input
                   value={mortgageTotal} onChange={(e) => setMortgageTotal(Number(e.target.value))} type="number" />
                 <span>£</span>
-                {(error === 'error' && !mortgageTotal) ? <p>This fıeld is required</p> : '' }
+                {(error && !mortgageTotal) ? <p>This fıeld is required</p> : ''}
               </div>
               <div className="inpt">
                 <div className={`inpt-term ${!mortgageTerm ? error : ''}`}>
@@ -74,7 +74,7 @@ export default function Mortgage() {
                     value={mortgageTerm} onChange={(e) => setMortgageTerm(Number(e.target.value))}
                     type="number" />
                   <span>years</span>
-                  {(error === 'error' && !mortgageTerm) ? <p>This fıeld is required</p> : '' }
+                  {(error && !mortgageTerm) ? <p>This fıeld is required</p> : ''}
                 </div>
                 <div className={`inpt-rate ${!interest ? error : ''}`}>
                   <label>Interest Rate</label>
@@ -82,7 +82,7 @@ export default function Mortgage() {
                     value={interest} onChange={(e) => setInterest(Number(e.target.value))}
                     type="number" />
                   <span>%</span>
-                  {(error === 'error' && !interest) ? <p>This fıeld is required</p> : '' }
+                  {(error && !interest) ? <p>This fıeld is required</p> : ''}
                 </div>
               </div>
               <div className="type">
