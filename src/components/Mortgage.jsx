@@ -27,7 +27,12 @@ export default function Mortgage() {
 
 
   const result = () => {
-    setTotal(interestRate(mortgageTotal, interest))
+    if ((mortgageTerm && mortgageTotal && interest) === '') {
+      console.log("errorrrrr")
+      setError('error')
+    } else {
+      setTotal(interestRate(mortgageTotal, interest))
+    }
   }
 
 
@@ -84,15 +89,11 @@ export default function Mortgage() {
         </div>
         <div className="card">
           <div className="row">
-            {ilistrationEmpty}
-            <h2>  Results shown here</h2>
-            {monthly} <h3>: her ay</h3><br />
-            {total} <h3>: toplam</h3>
-            <p>Complete the form and click “calculate repayments” to see what
-              your monthly repayments would be.</p>
-          </div>
+            {
+            total === ''  }
         </div>
       </div>
+    </div >
     </>
   )
 }
