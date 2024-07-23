@@ -30,15 +30,17 @@ $slat900: hsl(202, 55%, 16%);
 
 }
 
-.error{
-  p{
+.error {
+  p {
     color: $red;
     font-size: 15px;
   }
-  input{
+
+  input {
     border-color: $red !important;
   }
-  span{
+
+  span {
     color: $white;
     background-color: $red !important;
   }
@@ -67,6 +69,7 @@ $slat900: hsl(202, 55%, 16%);
       a {
         color: $slat700;
         text-decoration: underline;
+        cursor: pointer;
       }
     }
 
