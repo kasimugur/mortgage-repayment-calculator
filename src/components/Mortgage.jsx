@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { iconCalculator, ilistrationEmpty } from '../page/page'
 import '../scss/style.scss'
 import { useEffect } from 'react'
+import DefaultCard from './DefaultCard'
+import ActiveCard from './ActiveCard'
 
 export default function Mortgage() {
 
@@ -51,7 +53,7 @@ export default function Mortgage() {
               <input
                 value={mortgageTotal} onChange={(e) => setMortgageTotal(Number(e.target.value))} type="number" />
               <span>£</span>
-              {/* <p>This fıeld is required</p> */}
+              {/* {(error === 'error' && !mortgageTotal) ? <p>This fıeld is required</p> : '' } */}
             </div>
             <div className="inpt">
               <div className="inpt-term">
@@ -89,8 +91,7 @@ export default function Mortgage() {
         </div>
         <div className="card">
           <div className="row">
-            {
-            total === ''  }
+            { total === '' ? <DefaultCard /> : <ActiveCard /> }
         </div>
       </div>
     </div >
